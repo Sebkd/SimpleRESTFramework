@@ -17,6 +17,7 @@ class Student(User):
     pass
 
 
+# порождающий паттерн Абстрактная фабрика - фабрика пользователей
 class UserFactory:
     types = {
         'student': Student,

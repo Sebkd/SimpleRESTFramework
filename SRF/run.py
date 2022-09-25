@@ -3,8 +3,10 @@ import sys
 from wsgiref.simple_server import make_server
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent.resolve()))
-from SRF.simple_rest_framework.main import Framework
-from SRF.urls import routes, fronts
+from simple_rest_framework.main import Framework
+from urls import fronts
+from views import routes
+
 
 application = Framework(routes, fronts)
 
