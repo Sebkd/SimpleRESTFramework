@@ -1,4 +1,8 @@
-from simple_rest_framework.templator import render
+import pathlib
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).parent.parent.resolve()))
+from SRF.simple_rest_framework.templator import render
 
 
 class Index:
@@ -9,5 +13,3 @@ class Index:
 class About:
     def __call__(self, request):
         return '200 OK', 'about'
-
-# [END FILE]

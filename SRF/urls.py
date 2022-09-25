@@ -17,5 +17,3 @@ routes = {
     '/': Index(),
     '/about/': About(),
 }
-
-# [END FILE]
