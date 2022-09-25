@@ -45,9 +45,6 @@ class PostRequests:
         content_length = int(content_length_data) if content_length_data else 0
 
         # считываем данные, если они есть
-        # env['wsgi.input'] -> <class '_io.BufferedReader'>
-        # запускаем режим чтения
-
         data = env['wsgi.input'].read(content_length) \
             if content_length > 0 else b''
         return data
